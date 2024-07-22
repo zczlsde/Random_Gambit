@@ -24,7 +24,10 @@ def generate_random_efg(max_depth):
             return
 
         # Randomly decide the type of event
-        event_type = random.randint(0, 2)
+        if depth == (max_depth-1):
+            event_type = random.randint(0, 1)
+        else:
+            event_type = random.randint(0, 2)
 
         if event_type == 0:  # P1 move
             g.append_move(node, p1, [f"P1 choice {i}" for i in range(random.randint(2, 3))])
@@ -50,17 +53,22 @@ def generate_random_efg(max_depth):
 
     # Write the game to an EFG file
     efg = g.write(format='native')
-    return efg
+    return efg, g
 
 # Example usage
-for i in range(10):
-    print("Generating: ", i)
+total_games = 0
+while total_games<3000:
+    print("Generating: ", total_games)
     max_depth = random.randint(2, 4)
-    efg_content = generate_random_efg(max_depth)
-
+    efg_content, game = generate_random_efg(max_depth)
+    print(game.is_perfect_recall)
     # Save the EFG content to a file
-    name = "random_game_" + str(i) + ".efg"
-    with open(name, "w") as file:
-        file.write(efg_content)
+    if game.is_perfect_recall:
+        
+        name = "perfect_info_game/random_game_" + str(total_games) + ".efg"
+        with open(name, "w") as file:
+            file.write(efg_content)
+        
+        total_games += 1
 
-    print("Random EFG file generated with max depth:", max_depth)
+        print("Random EFG file generated with max depth:", max_depth)

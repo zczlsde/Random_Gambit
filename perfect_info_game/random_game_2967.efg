@@ -1,0 +1,12 @@
+EFG 2 R "Untitled extensive game" { "Alice" "Bob" }
+""
+
+c "" 1 "" { "Chance 0" 19/34 "Chance 1" 15/34 } 0
+p "" 1 1 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
+t "" 1 "" { 7, 3 }
+t "" 2 "" { -4, 8 }
+t "" 3 "" { 7, 3 }
+p "" 1 2 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
+t "" 4 "" { 4, -1 }
+t "" 5 "" { -2, -6 }
+t "" 6 "" { 1, 3 }

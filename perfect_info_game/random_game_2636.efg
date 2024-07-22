@@ -1,0 +1,13 @@
+EFG 2 R "Untitled extensive game" { "Alice" "Bob" }
+""
+
+p "" 2 1 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
+p "" 2 2 "" { "P2 choice 0" "P2 choice 1" } 0
+t "" 1 "" { 5, 10 }
+t "" 2 "" { -9, -8 }
+p "" 1 1 "" { "P1 choice 0" "P1 choice 1" } 0
+t "" 3 "" { -4, -7 }
+t "" 4 "" { 9, -3 }
+p "" 2 3 "" { "P2 choice 0" "P2 choice 1" } 0
+t "" 5 "" { -5, -4 }
+t "" 6 "" { 0, 7 }
