@@ -2,58 +2,50 @@ EFG 2 R "Untitled extensive game" { "Alice" "Bob" }
 ""
 
 p "" 2 1 "" { "P2 choice 0" "P2 choice 1" } 0
+c "" 1 "" { "Chance 0" 7/15 "Chance 1" 1/5 "Chance 2" 1/3 } 0
+c "" 2 "" { "Chance 0" 9/20 "Chance 1" 11/20 } 0
 p "" 1 1 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
-p "" 1 2 "" { "P1 choice 0" "P1 choice 1" } 0
-p "" 2 2 "" { "P2 choice 0" "P2 choice 1" } 0
-t "" 1 "" { -5, -9 }
-t "" 2 "" { 1, -3 }
-p "" 2 3 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
-t "" 3 "" { -3, 8 }
-t "" 4 "" { 10, -3 }
-t "" 5 "" { 7, 5 }
-c "" 1 "" { "Chance 0" 14/45 "Chance 1" 1/3 "Chance 2" 16/45 } 0
+t "" 1 "" { -9, -5 }
+t "" 2 "" { -4, -8 }
+t "" 3 "" { -10, -10 }
+p "" 2 2 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
+t "" 4 "" { 1, 5 }
+t "" 5 "" { 8, 0 }
+t "" 6 "" { 1, -4 }
+c "" 3 "" { "Chance 0" 2/3 "Chance 1" 1/3 } 0
+p "" 1 2 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
+t "" 7 "" { 2, 2 }
+t "" 8 "" { -4, 6 }
+t "" 9 "" { 3, -8 }
+p "" 2 3 "" { "P2 choice 0" "P2 choice 1" } 0
+t "" 10 "" { -10, -2 }
+t "" 11 "" { 7, 8 }
+p "" 2 4 "" { "P2 choice 0" "P2 choice 1" } 0
 p "" 1 3 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
-t "" 6 "" { -4, 10 }
-t "" 7 "" { -9, 2 }
-t "" 8 "" { -1, -10 }
-p "" 1 4 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
-t "" 9 "" { 10, -4 }
-t "" 10 "" { -5, -2 }
-t "" 11 "" { -7, -9 }
-p "" 2 4 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
-t "" 12 "" { -10, -7 }
-t "" 13 "" { 5, -8 }
-t "" 14 "" { -10, -2 }
-c "" 2 "" { "Chance 0" 19/36 "Chance 1" 7/36 "Chance 2" 5/18 } 0
-p "" 1 5 "" { "P1 choice 0" "P1 choice 1" } 0
-t "" 15 "" { 0, -1 }
-t "" 16 "" { 10, -7 }
+t "" 12 "" { 4, 1 }
+t "" 13 "" { -1, 10 }
+t "" 14 "" { 8, -9 }
 p "" 2 5 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
-t "" 17 "" { 2, 4 }
-t "" 18 "" { -4, 4 }
-t "" 19 "" { 1, 10 }
-p "" 2 6 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
-t "" 20 "" { 9, -6 }
-t "" 21 "" { 6, -6 }
-t "" 22 "" { 1, -2 }
+t "" 15 "" { -4, -8 }
+t "" 16 "" { 2, 9 }
+t "" 17 "" { 0, 7 }
+p "" 1 4 "" { "P1 choice 0" "P1 choice 1" } 0
+p "" 2 6 "" { "P2 choice 0" "P2 choice 1" } 0
+p "" 1 5 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
+t "" 18 "" { -10, 4 }
+t "" 19 "" { -2, 10 }
+t "" 20 "" { 6, -6 }
 p "" 2 7 "" { "P2 choice 0" "P2 choice 1" } 0
-p "" 1 6 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
-p "" 2 8 "" { "P2 choice 0" "P2 choice 1" } 0
-t "" 23 "" { -7, -7 }
-t "" 24 "" { -2, -3 }
-p "" 1 7 "" { "P1 choice 0" "P1 choice 1" } 0
-t "" 25 "" { -2, 9 }
-t "" 26 "" { 4, -6 }
-p "" 2 9 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
-t "" 27 "" { -10, -6 }
-t "" 28 "" { -7, -8 }
-t "" 29 "" { -7, -2 }
-p "" 1 8 "" { "P1 choice 0" "P1 choice 1" } 0
+t "" 21 "" { 5, 1 }
+t "" 22 "" { -6, 6 }
+p "" 2 8 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
+p "" 2 9 "" { "P2 choice 0" "P2 choice 1" } 0
+t "" 23 "" { 7, 1 }
+t "" 24 "" { -6, 6 }
 p "" 2 10 "" { "P2 choice 0" "P2 choice 1" "P2 choice 2" } 0
-t "" 30 "" { 6, 2 }
-t "" 31 "" { -7, 2 }
-t "" 32 "" { -10, 4 }
-p "" 1 9 "" { "P1 choice 0" "P1 choice 1" "P1 choice 2" } 0
-t "" 33 "" { 10, -9 }
-t "" 34 "" { 7, -6 }
-t "" 35 "" { -6, 2 }
+t "" 25 "" { 7, -8 }
+t "" 26 "" { 6, -1 }
+t "" 27 "" { 9, 4 }
+p "" 1 6 "" { "P1 choice 0" "P1 choice 1" } 0
+t "" 28 "" { -8, -1 }
+t "" 29 "" { 1, -8 }

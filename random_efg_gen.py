@@ -12,8 +12,8 @@ def generate_random_probabilities(n):
 def generate_random_efg(max_depth):
     # Initialize the game and players
     g = gbt.Game.new_tree()
-    p1 = g.add_player("Alice")
-    p2 = g.add_player("Bob")
+    p1 = g.add_player("P1")
+    p2 = g.add_player("P2")
 
     # Keep track of nodes for potential information sets
     p1_nodes_by_depth = [[] for _ in range(max_depth)]
@@ -36,7 +36,7 @@ def generate_random_efg(max_depth):
 
         if event_type == 0:  # P1 move
             # g.append_move(node, p1, [f"P1 choice {i}" for i in range(random.randint(2, 3))])
-            g.append_move(node, p1, [f"P1 choice {i}" for i in range(3)])
+            g.append_move(node, p1, [f"P1 choice {i}" for i in range(2)])
             if depth<max_depth-1:
                 for child in node.children:
                     
@@ -44,7 +44,7 @@ def generate_random_efg(max_depth):
 
         elif event_type == 1:  # P2 move
             # g.append_move(node, p2, [f"P2 choice {i}" for i in range(random.randint(2, 3))])
-            g.append_move(node, p2, [f"P2 choice {i}" for i in range(3)])
+            g.append_move(node, p2, [f"P2 choice {i}" for i in range(2)])
             if depth<max_depth-1:
                 for child in node.children:
                     
@@ -52,9 +52,9 @@ def generate_random_efg(max_depth):
 
         else:  # Chance move
             num_choices = random.randint(2, 3)
-            probabilities = generate_random_probabilities(3)
+            probabilities = generate_random_probabilities(2)
             # g.append_move(node, g.players.chance, [f"Chance {i}" for i in range(num_choices)])
-            g.append_move(node, g.players.chance, [f"Chance {i}" for i in range(3)])
+            g.append_move(node, g.players.chance, [f"Chance {i}" for i in range(2)])
             g.set_chance_probs(node.infoset, probabilities)
             
 
@@ -94,11 +94,11 @@ def generate_random_efg(max_depth):
 total_games = 0
 while total_games<1500:
     print("Generating: ", total_games)
-    max_depth = random.randint(2, 5)
+    max_depth = random.randint(2, 4)
     efg_content, game = generate_random_efg(max_depth)
     print(game.is_perfect_recall)
     # Save the EFG content to a file
-    fix = total_games+1500
+    fix = total_games + 1500
     if game.is_perfect_recall:
         name = "imperfect_info_game/random_game_" + str(fix) + ".efg"
         with open(name, "w") as file:

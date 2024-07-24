@@ -12,8 +12,8 @@ def generate_random_probabilities(n):
 def generate_random_efg(max_depth):
     # Initialize the game and players
     g = gbt.Game.new_tree()
-    p1 = g.add_player("Alice")
-    p2 = g.add_player("Bob")
+    p1 = g.add_player("P1")
+    p2 = g.add_player("P2")
 
     # Helper function to add random moves and outcomes
     def add_random_moves(node, depth):
@@ -57,15 +57,16 @@ def generate_random_efg(max_depth):
 
 # Example usage
 total_games = 0
-while total_games<3000:
+while total_games<1500:
     print("Generating: ", total_games)
     max_depth = random.randint(2, 4)
     efg_content, game = generate_random_efg(max_depth)
     print(game.is_perfect_recall)
+    fix = total_games + 1500
     # Save the EFG content to a file
     if game.is_perfect_recall:
         
-        name = "perfect_info_game/random_game_" + str(total_games) + ".efg"
+        name = "perfect_info_game/random_game_" + str(fix) + ".efg"
         with open(name, "w") as file:
             file.write(efg_content)
         
